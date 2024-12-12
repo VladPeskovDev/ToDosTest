@@ -27,7 +27,7 @@ export default function TodoList({ todos, onToggleTask, onDeleteTask }: TodoList
             {todo.text}
           </span>
           <button onClick={() => onDeleteTask(todo.id)} style={{ marginLeft: '10px' }}>
-            Delete
+            Удалить
           </button>
         </li>
       ))}

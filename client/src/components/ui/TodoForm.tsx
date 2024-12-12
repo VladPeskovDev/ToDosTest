@@ -21,11 +21,11 @@ export default function TodoForm({ onAddTask }: TodoFormProps): React.JSX.Elemen
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
-        placeholder="What needs to be done?"
+        placeholder="Добавить задачу"
         style={{ flex: 1, padding: '10px', fontSize: '16px' }}
       />
       <button type="submit" style={{ padding: '10px 15px', fontSize: '16px' }}>
-        Add
+        Добавить
       </button>
     </form>
   );

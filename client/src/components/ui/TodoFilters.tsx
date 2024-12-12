@@ -15,9 +15,9 @@ export default function TodoFilters({
 }: TodoFiltersProps): React.JSX.Element {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
-      <span>{activeCount} items left</span>
+      <span>{activeCount} items</span>
       <div>
-        {['All', 'Active', 'Completed'].map((filter) => (
+        {['Все', 'В работе', 'Завершена'].map((filter) => (
           <button
             key={filter}
             onClick={() => onFilterChange(filter)}
@@ -31,7 +31,7 @@ export default function TodoFilters({
         ))}
       </div>
       <button onClick={onClearCompleted} style={{ marginLeft: '10px' }}>
-        Clear completed
+        Очистка завершенных
       </button>
     </div>
   );

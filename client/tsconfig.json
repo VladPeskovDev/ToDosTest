@@ -1,4 +1,20 @@
 {
   "files": [],
-  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.test.json" }
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx", // Указывает TypeScript, как обрабатывать JSX
+    "types": ["vitest"], // Добавляет поддержку глобальных типов Vitest
+    "lib": ["ESNext", "DOM"], // Добавляет современные возможности JS и DOM API
+    "target": "ESNext", // Указывает целевой стандарт JavaScript
+    "module": "ESNext", // Использует модульную систему ES
+    "moduleResolution": "Node", // Указывает, как разрешать модули
+    "strict": true, // Включает строгую типизацию
+    "esModuleInterop": true, // Совместимость с CommonJS модулями
+    "resolveJsonModule": true, // Поддержка импорта JSON-файлов
+    "skipLibCheck": true // Пропускает проверку типов в node_modules
+  }
 }

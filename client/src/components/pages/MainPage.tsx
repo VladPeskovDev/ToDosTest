@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import TodoForm from '../ui/TodoForm';
 import TodoList from '../ui/TodoList';
 import TodoFilters from '../ui/TodoFilters';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 type TodoItem = {
   id: number;
   text: string;
   completed: boolean;
-
 }
 
 export default function MainPage(): React.JSX.Element {
-  const [todos, setTodos] = useState<TodoItem[]>([]);
+  const [todos, setTodos] = useLocalStorage<TodoItem[]>('todos', []);
   const [filter, setFilter] = useState('All');
 
   const handleAddTask = (text: string): void => {
@@ -35,6 +35,7 @@ export default function MainPage(): React.JSX.Element {
   const handleClearCompleted = (): void => {
     setTodos(todos.filter((todo) => !todo.completed));
   };
+
 
   const filteredTodos = todos.filter((todo) => {
   if (filter === 'В работе') return !todo.completed;
