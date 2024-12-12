@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import MainPage from '../MainPage';
 import { describe, expect, test } from 'vitest';
+import '@testing-library/jest-dom';
 
 describe('MainPage', () => {
   test('Добавление и удаление задачи', () => {
